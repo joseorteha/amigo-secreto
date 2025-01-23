@@ -18,20 +18,20 @@
 }
 
 body {
-    height: 100vh;
     background-color: var(--color-primary);
-    display: flex;
-    justify-content: center;
-    align-items: center;
     font-family: 'Inter', sans-serif;
-}
-
-.main-content {
     display: flex;
     flex-direction: column;
-    height: 100%;
+    min-height: 100vh;
+    margin: 0;
+}
+
+
+.main-content {
+    flex-grow: 1;
     width: 100%;
 }
+
 
 /* Banner */
 .header-banner {
@@ -231,3 +231,29 @@ ul {
 .button-clear:hover {
     background-color: #c0392b;
 }
+
+/* Estilos del footer */
+.footer {
+    text-align: center;
+    padding: 20px;
+    background-color: #4B69FD;
+    color: #FFF9EB;
+    font-family: 'Inter', sans-serif;
+    font-size: 16px;
+    width: 100%;
+    margin-top: auto;
+}
+
+
+.footer a {
+    color: #FFF9EB;
+    text-decoration: none;
+    font-weight: bold;
+    margin: 0 10px;
+    transition: color 0.3s ease;
+}
+
+.footer a:hover {
+    color: #fe652b;
+}
+
