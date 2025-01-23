@@ -21,6 +21,7 @@ body {
     display: flex;
     justify-content: center;
     align-items: center;
+    font-family: 'Inter', sans-serif;
 }
 
 .main-content {
@@ -36,7 +37,13 @@ body {
     display: flex;
     justify-content: center;
     align-items: center;
-    padding: 40px 0 0;
+    padding: 40px 20px 0;
+    text-align: center;
+}
+
+.header-banner img {
+    max-width: 80%;
+    height: auto;
 }
 
 /* Sección de entrada */
@@ -59,6 +66,7 @@ body {
     font-weight: 900;
     font-style: italic;
     color: var(--color-white);
+    text-align: center;
 }
 
 .section-title {
@@ -77,48 +85,41 @@ body {
     width: 100%;
     max-width: 600px;
     margin-top: 20px;
+    flex-wrap: wrap;
 }
 
 .input-name {
     width: 100%;
-    padding: 10px;
+    padding: 15px;
     border: 2px solid #000;
-    border-radius: 25px 0 0 25px;
+    border-radius: 25px;
     font-size: 16px;
+    text-align: center;
 }
 
 .button-container {
-    width: 300px;
+    width: 100%;
+    max-width: 300px;
     justify-content: center;
-}
-
-/* Estilos de entrada de texto */
-.input-title {
-    flex: 1;
-    padding: 10px 15px;
-    font-size: 16px;
-    border: 2px solid #333;
-    border-right: none;
-    border-radius: 25px 0 0 25px;
-    font-family: "Merriweather", serif;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+    margin-top: 15px;
 }
 
 /* Estilos de botón */
 button {
-    padding: 15px 30px;
+    width: 100%;
+    padding: 15px;
     font-family: "Inter", sans-serif;
     font-size: 16px;
     border: 2px solid #000;
     border-radius: 25px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
     cursor: pointer;
+    text-align: center;
 }
 
 .button-add {
     background-color: var(--color-tertiary);
     color: var(--color-text);
-    border-radius: 0 25px 25px 0;
 }
 
 .button-add:hover {
@@ -132,6 +133,7 @@ ul {
     font-family: "Inter", sans-serif;
     font-size: 18px;
     margin: 20px 0;
+    text-align: center;
 }
 
 .result-list {
@@ -139,24 +141,91 @@ ul {
     color: #05DF05;
     font-size: 22px;
     font-weight: bold;
-    text-align: center;
 }
 
-/* Botón de sortear título */
+/* Botón de sorteo */
 .button-draw {
     display: flex;
     align-items: center;
+    justify-content: center;
+    gap: 15px;
     width: 100%;
-    padding: 10px 40px;
+    padding: 15px 20px;
     color: var(--color-white);
     background-color: var(--color-button);
-    font-size: 16px;
+    font-size: 18px;
 }
 
 .button-draw img {
-    margin-right: 40px;
+    width: 24px;
 }
 
 .button-draw:hover {
     background-color: var(--color-button-hover);
+}
+
+/* Media Queries para responsividad */
+@media (max-width: 768px) {
+    .main-title {
+        font-size: 36px;
+    }
+
+    .section-title {
+        font-size: 28px;
+    }
+
+    .input-wrapper {
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    .input-name {
+        border-radius: 25px;
+    }
+
+    .button-draw {
+        font-size: 16px;
+        padding: 12px 16px;
+    }
+}
+
+@media (max-width: 480px) {
+    .main-title {
+        font-size: 28px;
+    }
+
+    .section-title {
+        font-size: 24px;
+    }
+
+    .input-section {
+        border-radius: 32px 32px 0 0;
+        padding: 15px;
+    }
+
+    .button-draw {
+        flex-direction: column;
+        gap: 10px;
+        padding: 10px;
+        font-size: 14px;
+    }
+
+    .button-draw img {
+        width: 20px;
+    }
+}
+.button-clear {
+    margin-top: 15px;
+    padding: 15px 30px;
+    font-size: 16px;
+    background-color: #e74c3c;
+    color: var(--color-white);
+    border: 2px solid #000;
+    border-radius: 25px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+    cursor: pointer;
+}
+
+.button-clear:hover {
+    background-color: #c0392b;
 }
